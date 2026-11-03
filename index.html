@@ -40,7 +40,8 @@ section + section { border-top: 1px solid var(--line); }
 .head p { color: var(--ink-soft); }
 header { background: var(--ink); color: #fff; }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; flex-wrap: wrap; }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand { display: flex; align-items: center; text-decoration: none; }
+.brand img { display: block; height: 48px; width: auto; background: #fff; padding: 6px 10px; border-radius: 8px; }
 .mark { width: 40px; height: 40px; border-radius: 8px; background: var(--brass); color: var(--ink); display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 1.35rem; }
 .brand-name { font-family: var(--display); font-weight: 600; font-size: 1.1rem; }
 nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; flex-wrap: wrap; }
@@ -103,10 +104,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Suite 5 Management Services home">
-      <span class="mark" aria-hidden="true">5</span>
-      <span class="brand-name">Suite 5 Management Services</span>
-    </a>
+    <a class="brand" href="#top" aria-label="Suite 5 Management Services home"><img src="logo.png" alt="Suite 5 Management Services" height="48"></a>
     <nav aria-label="Main">
       <ul>
         <li><a href="#solutions">Solutions</a></li>
