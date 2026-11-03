@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Suite 5 Management Services: smart, affordable technology for local businesses, from Google review stands to automated customer messages.">
+<title>Suite 5 Management Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #14213d;
+  --ink-soft: #3b4660;
+  --paper: #f7f5f0;
+  --card: #ffffff;
+  --brass: #9a7433;
+  --brass-dark: #846329;
+  --line: #e2ddd2;
+  --tint: #efe6d4;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; }
+h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); font-weight: 600; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+p { margin: 0; max-width: 65ch; }
+.eyebrow { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass); }
+section { padding: 72px 0; }
+section + section { border-top: 1px solid var(--line); }
+.head { display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px; }
+.head p { color: var(--ink-soft); }
+header { background: var(--ink); color: #fff; }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 0; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.mark { width: 40px; height: 40px; border-radius: 8px; background: var(--brass); color: var(--ink); display: grid; place-items: center; font-family: var(--display); font-weight: 700; font-size: 1.35rem; }
+.brand-name { font-family: var(--display); font-weight: 600; font-size: 1.1rem; }
+nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; flex-wrap: wrap; }
+nav a { text-decoration: none; font-size: 0.95rem; color: #d7dcea; }
+nav a:hover { color: #fff; }
+.btn { display: inline-block; padding: 12px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 0.98rem; }
+.btn-brass { background: var(--brass); color: #fff; }
+.btn-brass:hover { background: var(--brass-dark); }
+.btn-ghost { border: 2px solid var(--ink); color: var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: #fff; }
+header .btn-brass { padding: 9px 16px; font-size: 0.9rem; }
+.hero { padding: 80px 0 72px; }
+.hero-grid { display: grid; gap: 48px; grid-template-columns: 1fr; align-items: center; }
+.hero h1 { margin: 14px 0 20px; }
+.lead { font-size: 1.15rem; color: var(--ink-soft); }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.pitch { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: 0 10px 30px rgba(20,33,61,0.07); }
+.pitch h3 { margin-bottom: 14px; }
+.pitch ol { margin: 0; padding: 0; list-style: none; counter-reset: s; }
+.pitch li { counter-increment: s; display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-top: 1px solid var(--line); }
+.pitch li:first-child { border-top: 0; padding-top: 0; }
+.pitch li::before { content: counter(s); flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 0.9rem; }
+.pitch strong { display: block; }
+.pitch span { color: var(--ink-soft); font-size: 0.95rem; }
+@media (min-width: 880px) { .hero-grid { grid-template-columns: 1.1fr 0.9fr; } }
+.grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 620px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) { .grid.four { grid-template-columns: repeat(4, 1fr); } .grid.three { grid-template-columns: repeat(3, 1fr); } }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+.card p { color: var(--ink-soft); font-size: 0.97rem; }
+.card .price { font-family: var(--display); font-size: 1.9rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.card .price small { font-family: var(--body); font-size: 0.9rem; color: var(--ink-soft); font-weight: 500; }
+.card .for { font-size: 0.88rem; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: 10px; margin-top: auto; }
+.card.feature { background: var(--ink); color: #fff; border-color: var(--ink); }
+.card.feature p, .card.feature .for { color: #d2d8e6; }
+.card.feature .for { border-color: #33416a; }
+.card.feature .price { color: #fff; }
+.tag { align-self: flex-start; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: var(--tint); padding: 4px 10px; border-radius: 999px; }
+.card.feature .tag { background: var(--brass); color: #fff; }
+.numbers { counter-reset: n; }
+.numbers .card { position: relative; padding-top: 30px; }
+.numbers .card::before { counter-increment: n; content: "0" counter(n); font-family: var(--display); font-size: 0.95rem; color: var(--brass); font-weight: 700; }
+.industries { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 800px) { .industries { grid-template-columns: repeat(4, 1fr); } }
+.ind { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; font-weight: 500; }
+.contact { background: var(--ink); color: #fff; }
+.contact h2 { color: #fff; }
+.contact p { color: #d2d8e6; }
+.contact-grid { display: grid; gap: 32px; grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 800px) { .contact-grid { grid-template-columns: 1.2fr 1fr; } }
+.info dt { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--brass); font-weight: 700; margin-top: 18px; }
+.info dt:first-child { margin-top: 0; }
+.info dd { margin: 4px 0 0; font-size: 1.1rem; font-variant-numeric: tabular-nums; }
+.info a { text-decoration: underline; text-underline-offset: 3px; }
+footer { background: #0c162b; color: #9aa4bd; padding: 26px 0; font-size: 0.88rem; }
+footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Suite 5 Management Services home">
+      <span class="mark" aria-hidden="true">5</span>
+      <span class="brand-name">Suite 5 Management Services</span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#industries">Industries</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-brass" href="#contact">Book a demo</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Smart Solutions. Better Business.</p>
+      <h1>Affordable technology that brings in reviews and keeps customers coming back.</h1>
+      <p class="lead" style="margin-top:20px">Suite 5 helps local businesses get more Google reviews, serve customers better and simplify daily operations. We set it up, train your team and support it after.</p>
+      <div class="actions">
+        <a class="btn btn-brass" href="#contact">Book a free demo</a>
+        <a class="btn btn-ghost" href="#solutions">See solutions</a>
+      </div>
+    </div>
+    <aside class="pitch" aria-label="How a customer uses it">
+      <h3>See it in 30 seconds</h3>
+      <ol>
+        <li><div><strong>Tap or scan</strong><span>A customer taps the NFC stand or scans the QR code.</span></div></li>
+        <li><div><strong>Open your Google page</strong><span>Your review page loads instantly.</span></div></li>
+        <li><div><strong>Leave a review</strong><span>One tap, and it is done.</span></div></li>
+      </ol>
+    </aside>
+  </div>
+</section>
+
+<section id="solutions">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Solutions</p>
+      <h2>Start with reviews. Add what your business needs next.</h2>
+      <p>Most businesses start with the review system. Once it is running, we look at where customers wait, call or drop off, and add simple tools for those moments.</p>
+    </div>
+    <div class="grid three">
+      <article class="card feature">
+        <span class="tag">Starter</span>
+        <h3>NFC Review System</h3>
+        <div class="price">From $199 <small>one time</small></div>
+        <p>A 6-inch review stand with NFC tap and QR scan, set up to link to your Google review page. Includes setup, a brief hands-on handoff for your team, and 30 days of support.</p>
+        <p class="for">For: any business that wants more reviews</p>
+      </article>
+      <article class="card">
+        <h3>Order-ready and appointment texts</h3>
+        <div class="price">Quote <small>monthly plan</small></div>
+        <p>Automatic texts when an order or vehicle is ready, plus appointment reminders that cut no-shows.</p>
+        <p class="for">For: restaurants, auto shops, dry cleaners, barbershops</p>
+      </article>
+      <article class="card">
+        <h3>Digital menus and waitlists</h3>
+        <div class="price">Quote <small>monthly plan</small></div>
+        <p>Menus customers can open on their phones, and a waitlist that texts guests when their table or chair is ready.</p>
+        <p class="for">For: restaurants, nail salons, barbershops</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Products</p>
+      <h2>Hardware for reviews and loyalty.</h2>
+    </div>
+    <div class="grid four">
+      <article class="card">
+        <span class="tag">Stand</span>
+        <h3>Google Review Stand</h3>
+        <div class="price">$55</div>
+        <p>A 6-inch white stand that says "Leave us a Google review," with a QR code and NFC tap.</p>
+        <p class="for">Small countertop size</p>
+      </article>
+      <article class="card">
+        <h3>Google Review Cards</h3>
+        <div class="price">$55</div>
+        <p>Pocket-sized cards with the same NFC tap and QR code, for handing to customers at checkout.</p>
+        <p class="for">Works alongside a stand</p>
+      </article>
+      <article class="card">
+        <h3>Pop-Up Banners</h3>
+        <div class="price">$99 <small>design included</small></div>
+        <p>Event and storefront banners with your brand, review link and QR code.</p>
+        <p class="for">For events and storefronts</p>
+      </article>
+      <article class="card">
+        <h3>Loyalty and follow-up</h3>
+        <div class="price">Quote</div>
+        <p>Digital loyalty cards and customer follow-up messages for retail, car washes and cleaning services.</p>
+        <p class="for">For repeat-visit businesses</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">How it works</p>
+      <h2>Three steps from demo to running.</h2>
+    </div>
+    <div class="grid three numbers">
+      <article class="card">
+        <h3>See the demo</h3>
+        <p>We show you a working stand and a sample text message in your own business context.</p>
+      </article>
+      <article class="card">
+        <h3>Pick the right fit</h3>
+        <p>We recommend the one or two tools that solve a real problem for your business. No extras you do not need.</p>
+      </article>
+      <article class="card">
+        <h3>Install, train and support</h3>
+        <p>We set everything up, show your staff how to use it and stay available after launch.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="industries">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Industries</p>
+      <h2>Built for businesses that serve people in person.</h2>
+    </div>
+    <div class="industries">
+      <div class="ind">Restaurants</div>
+      <div class="ind">Barbershops</div>
+      <div class="ind">Beauty salons</div>
+      <div class="ind">Nail salons</div>
+      <div class="ind">Auto repair shops</div>
+      <div class="ind">Retail stores</div>
+      <div class="ind">Car washes</div>
+      <div class="ind">Cleaning services</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow">Book a demo</p>
+      <h2 style="margin:12px 0 16px">See it working in your business.</h2>
+      <p>Tell us what your business does and what is hard to manage. We will show you the fit, the price and the setup time.</p>
+      <div class="actions">
+        <a class="btn btn-brass" id="sms-link" href="#contact">Text to book</a>
+      </div>
+    </div>
+    <dl class="info">
+      <dt>Phone</dt>
+      <dd><a id="phone-link" href="#contact">404-795-3674</a></dd>
+      <dt>Email</dt>
+      <dd><a id="email-link" href="#contact">hello@suite5management.com</a></dd>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Suite 5 Management Services. Independent service, not affiliated with Google, Instagram or TikTok.</span>
+    <span>Smart Solutions. Better Business.</span>
+  </div>
+</footer>
+
+<script>
+  // Edit these values to update contact details everywhere on the page.
+  var CONFIG = {
+    phone: "404-795-3674",
+    smsBody: "Hi Suite 5, I would like to book a demo.",
+    email: "hello@suite5management.com"
+  };
+  var digits = CONFIG.phone.replace(/\D/g, "");
+  document.getElementById("phone-link").href = "tel:+1" + digits;
+  document.getElementById("phone-link").textContent = CONFIG.phone;
+  document.getElementById("sms-link").href = "sms:+1" + digits + "?body=" + encodeURIComponent(CONFIG.smsBody);
+  document.getElementById("email-link").href = "mailto:" + CONFIG.email;
+  document.getElementById("email-link").textContent = CONFIG.email;
+</script>
+</body>
+</html>
